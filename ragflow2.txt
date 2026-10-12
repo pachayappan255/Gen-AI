@@ -1,0 +1,103 @@
+RAG Pipeline: 😍🤣😂
+Step 1:
+Data Loader
+    -word
+    -pdf
+    -.txt
+
+    How? and which tool do we use for this?
+    langchain(framework)
+
+    Interview Questions:
+    how you will extract text information from (pdf with text) ?
+        -langchain
+    pdf with image?
+        -inside image text content
+        use --> OCR Model
+        -graph based image
+        use --> VLM Model
+
+    OCR?
+        with help of this Paddle OCR model we can extract the text inside the image.
+    VLM?
+        we can get the summary or description about graph
+
+    How will you handle if pdf is having both text and image content?
+        Hybrid method
+
+        1) text -> langchain
+        2) image -> VLM or OCR depends on scenario
+
+    merge both text (one from langchain document loader and second from VLM or OCR) before 
+    splitting the documents into multiple parts.
+
+    Example:
+        Resume in Canva --> use OCR Model 
+
+Step 2:
+Text Normalization
+1) page Numbers
+2) Unwanted characters (removing emojis,spl characters,punctuations)
+3) expand the words( example -> didn't(did not),ASAP--> As soon as Possible)
+4) correcting the words (not possible to correect all the words)
+.
+.
+10)
+
+NLP --> Natural Language Processing
+
+1) nltk(natural language toolkit)
+2) spacy
+
+
+Step 3:
+Chuncking --> converting document into multiple parts
+This Part --> Chuncks
+tool --> langchain
+
+
+Step 4:
+Embeddings --> converts chuncks into Numbers(vectore) Numbers--> vectors
+tool --> langchain
+Technique : transformers(encoder only architecture)
+
+
+Step 5:
+Vector DB --> for storing the chuncks
+tool --> langchain
+DB : FAISS --> Facebook AI Similarity Search
+
+
+Step 6:
+User Query(Prompt) 
+
+
+Step 7:
+Tokenization --> Splitting the text into multiple parts
+Tool --> langchain and python scripts
+
+
+Step 8:
+Query Embeddings (Convert query(prompt-text) into numbers)
+Tool --> langchain
+Technnique : Embeddings(convert text into vectors)
+
+
+Step 9:
+Retrieval (Extracting the relevant documents from the vector database)
+Technique : Similarity Search
+Statistics Concepts :
+        1) Cosine Similarity
+        2) Euclidean Distance(KNN)
+
+
+Interview Questions:
+RAG uses which algorithm for the Retrieval?
+    it uses KNN Algorithm (Euclidean Distance Formula)
+
+
+Step 10:
+LLM(Large Language Model)
+    Tool : langchain
+    - This we use to structure the output.
+    
