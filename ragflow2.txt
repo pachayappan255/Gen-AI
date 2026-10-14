@@ -100,4 +100,5 @@ Step 10:
 LLM(Large Language Model)
     Tool : langchain
     - This we use to structure the output.
-    
+
+What is RAG?
