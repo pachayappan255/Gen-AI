@@ -1,0 +1,3 @@
+I havve a smal sampel of misspeled words for text normalizaton.
+TextBlob can corect wrods like recieve, seperate, beautifull, and adress.
+This sentense has severl erors that can be fixed automaticaly.
